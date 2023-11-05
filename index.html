@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!----------slide show bootstrap----------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <!--------------icon for stars-------------->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+
+    <!---------Boxicons CSS ------------>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-----------my css-->
+    <link
+      rel="stylesheet"
+      href="./css/app.css"
+    />
+
+    <!-------------favicon----------->
+    <link
+      rel="shortcut icon"
+      href="./images/home-images/logo.png"
+      type="image/x-icon"
+    />
+    <title>Plate Pleasure | Home</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"
+          ><img
+            src="./images/home-images/logo.png"
+            alt="Kusina La Pinas Logo"
+        /></span>
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo navLogo"
+              ><img
+                src="./images/home-images/logo.png"
+                alt="Kusina La Pinas Logo"
+            /></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a
+                href="index.html"
+                id="home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="menu.html"
+                id="menu"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                id="About"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+          <div class="searchBox">
+            <div class="searchToggle"></div>
+          </div>
+        </div>
+
+        <div class="options">
+          <label for="language">Select Language:</label>
+          <select id="language">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="ko">Korean</option>
+            <option value="ja">Japanese</option>
+            <option value="es">Spanish</option>
+            <option value="ru">Russian</option>
+            <option value="zh">Chinese</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <canvas id="canvas1"></canvas>
+
+    <!------------slide show------------>
+    <section
+      id="learn"
+      class="p-5 text-dark mt-5"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 p-5">
+            <h2 id="first-title">Plate Pleasure</h2>
+            <p
+              class="lead"
+              id="first-paragraph"
+            >
+              Food is more than just sustenance; it is an art form that
+              transcends cultures and brings people together. The pleasure of
+              eating food is in the subtle blend of flavors, the perfect balance
+              of textures, and the harmonious combination of flavors that create
+              a culinary masterpiece.
+            </p>
+
+            <div class="search-food d-flex">
+              <input
+                type="text"
+                placeholder="Search food..."
+              />
+              <a
+                href="#"
+                class="button-food"
+              >
+                Search</a
+              >
+            </div>
+            <!-- <div class="search-bar">
+              <input
+                type="text"
+                placeholder="Search"
+              />
+            </div> -->
+          </div>
+          <div class="col-md-6">
+            <div class="slideshow">
+              <img
+                src="./images/slide-show/first-image.jpg"
+                alt="vegetable"
+                class="slide-image"
+              />
+              <img
+                src="./images/slide-show/second-image.jpg"
+                alt="pizza"
+                class="slide-image"
+              />
+              <img
+                src="./images/slide-show/third-image.PNG"
+                alt="chicken adobo"
+                class="slide-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- first section  of left image-->
+    <section
+      id="learn"
+      class="p-5"
+    >
+      <div class="left-image">
+        <div class="container">
+          <div class="row align-items justify-content-between">
+            <div class="col-md">
+              <img
+                src="./images/home-images/left-image.jpg"
+                alt="first picture"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md p-5">
+              <h2 id="second-title">Grilled Meat</h2>
+              <p
+                class="lead"
+                id="second-first-paragraph"
+              >
+                We specialize in authentic Southern cuisine, using only the
+                finest ingredients to create delicious and mouth watering
+                dishes.
+              </p>
+              <p id="second-second-paragraph">
+                Our menu features a variety of delicious dishes, including ribs,
+                brisket, and smothered pork chops, along with sides like mac and
+                cheese and mashed potatoes.
+              </p>
+              <button id="second-button">Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- second Section of right image-->
+    <section
+      id="learn"
+      class="p-5 text-dark"
+    >
+      <div class="right-image">
+        <div class="container">
+          <div class="row align-items justify-content-between">
+            <div class="col-md p-5">
+              <h2 id="third-title">Putchinta</h2>
+              <p
+                class="lead"
+                id="third-paragraph"
+              >
+                Filipino kakanin is a traditional dish from the Philippines that
+                consists of cooked rice mixed with various ingredients.
+              </p>
+              <p id="third-third-paragraph">
+                Puto cuchinta or kutsinta is a type of steamed rice cake (puto)
+                found throughout the Philippines. It is made from a mixture of
+                tapioca or rice flour, brown sugar and lye, enhanced with yellow
+                food coloring or annatto extract, and steamed in small ramekins.
+                It bears resemblance to the Burmese mont kywe the and Indonesian
+                and Malaysian kuih kosui.
+              </p>
+              <button id="second-button">Read more</button>
+            </div>
+            <div class="col-md">
+              <img
+                src="./images/home-images/right-image.jpg"
+                alt="second picture"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------popular dishes-------------->
+    <section
+      class="menu ptb-80"
+      id="menu"
+    >
+      <div class="menu-items">
+        <div class="container">
+          <div class="section-title">
+            <h3>Menu</h3>
+            <h2>Popular Dishes</h2>
+            <p>
+              The Filipino cuisine is known for its rich and flavorful dishes
+              that combine a mix of Asian, European, and African influences. The
+              use of spices and herbs, along with fresh ingredients, results in
+              a culinary experience that is both flavorful and satisfying.
+            </p>
+          </div>
+
+          <div class="item">
+            <img
+              src="./images/burger.png"
+              alt="Item Image"
+            />
+            <div class="item-content">
+              <h4>Burger</h4>
+              <p>
+                Our burger is a perfect choice for any occasion, whether it's a
+                quick lunch or a romantic dinner with your significant other.
+              </p>
+              <div class="action">
+                <span class="price">Php 105.25</span>
+                <button class="cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img
+              src="./images/pizza.png"
+              alt="Item Image"
+            />
+            <div class="item-content">
+              <h4>Pizza</h4>
+              <p>
+                Our pizza is a perfect choice for any occasion, whether it's a
+                quick lunch or a romantic dinner with your significant other.
+              </p>
+              <div class="action">
+                <span class="price">Php 99.99</span>
+                <button class="cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img
+              src="./images/salad.png"
+              alt="Item Image"
+            />
+            <div class="item-content">
+              <h4>Salad</h4>
+              <p>
+                Our salad is made with organic ingredients and is served with a
+                crisp dressing that will leave you wanting more.
+              </p>
+              <div class="action">
+                <span class="price">Php 150.50</span>
+                <button class="cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------testimonials of 3 images-------------->
+    <section id="section-testimonials">
+      <div class="section-testimonials">
+        <div class="header-testimonials">
+          <h1 id="fifth-title">Our Customer Reviews</h1>
+          <p id="fifth-paragraph">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="reviewSection">
+          <!------------first person-------------->
+          <div class="reviewItem">
+            <div class="top">
+              <div class="clientImage">
+                <img
+                  src="./images/slider-01.jpg"
+                  alt="first person"
+                />
+                <span id="first-person">Ryan Azur</span>
+              </div>
+              <ul>
+                <li><i class="bi-solid bi-star"></i></li>
+                <li><i class="bi-solid bi-star"></i></li>
+                <li><i class="bi-solid bi-star"></i></li>
+                <li><i class="bi-regular bi-star"></i></li>
+                <li><i class="bi-regular bi-star"></i></li>
+              </ul>
+            </div>
+            <article>
+              <p
+                class="review"
+                id="first-review"
+              >
+                Each bite is a culinary delight, with flavors that leave you
+                wanting more.
+              </p>
+              <p id="date1">November 7, 2023 <i class="bi bi-calendar4"></i></p>
+            </article>
+          </div>
+
+          <!------------second person-------------->
+          <div class="reviewItem">
+            <div class="top">
+              <div class="clientImage">
+                <img
+                  src="./images/slider-01.jpg"
+                  alt="second person"
+                />
+                <span id="second-person">Quez Fabela</span>
+              </div>
+              <ul>
+                <li><i class="bi-solid bi-star"></i></li>
+                <li><i class="bi-solid bi-star"></i></li>
+                <li><i class="bi-solid bi-star"></i></li>
+                <li><i class="bi-regular bi-star"></i></li>
+                <li><i class="bi-regular bi-star"></i></li>
+              </ul>
+            </div>
+            <article>
+              <p
+                class="review"
+                id="second-review"
+              >
+                The ambiance is warm and cozy, creating a welcoming atmosphere
+                for dining.
+              </p>
+              <p id="date2">November 7, 2023 <i class="bi bi-calendar4"></i></p>
+            </article>
+          </div>
+
+          <!------------third person-------------->
+          <div class="reviewItem">
+            <div class="top">
+              <div class="clientImage">
+                <img
+                  src="./images/slider-01.jpg"
+                  alt="third person"
+                />
+                <span id="third-person">Lancelot Guinevere</span>
+              </div>
+              <ul>
+                <li><i class="bi-solid bi-star"></i></li>
+                <li><i class="bi-solid bi-star"></i></li>
+                <li><i class="bi-solid bi-star"></i></li>
+                <li><i class="bi-regular bi-star"></i></li>
+                <li><i class="bi-regular bi-star"></i></li>
+              </ul>
+            </div>
+            <article>
+              <p
+                class="review"
+                id="third-review"
+              >
+                The menu offers a variety of options, catering to all tastes and
+                preferences.
+              </p>
+              <p id="date3">November 7, 2023 <i class="bi bi-calendar4"></i></p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------footer-------------->
+    <footer id="main-footer">
+      <div class="container">
+        <div class="sub-footer">
+          <div class="first-class">
+            <h1 id="footer-title">Kusina La Pinas</h1>
+            <p id="first-class-paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+              suscipit labore. Debitis, quidem! Obcaecati, nulla.
+            </p>
+          </div>
+          <div class="second-class">
+            <h1 id="footer-title">Get Help</h1>
+            <div class="class-link">
+              <div class="first-link">
+                <a
+                  href="#"
+                  id="status"
+                  >FAQ</a
+                >
+              </div>
+              <div class="second-link">
+                <a
+                  href="#"
+                  id="status"
+                  >Shipping</a
+                >
+              </div>
+              <div class="third-link">
+                <a
+                  href="#"
+                  id="status"
+                  >Returns</a
+                >
+              </div>
+              <div class="fourth-link">
+                <a
+                  href="#"
+                  id="status"
+                  >Order Status</a
+                >
+              </div>
+              <div class="fifth-link">
+                <a
+                  href="#"
+                  id="status"
+                  >Payment Options</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="third-class">
+            <h1 id="footer-title">Connect With Us</h1>
+            <div class="social">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <h1 id="footer-title">Tropang SyntaxSculptor</h1>
+            <p id="third-class-paragraph">Created by: Cristel, Jc, Geoff</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+
+
+  </body>
+</html>

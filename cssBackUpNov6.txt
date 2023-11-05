@@ -1,0 +1,69 @@
+#inputFood {
+  margin-top: 10rem;
+
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: column; /* Display new images in a new line */
+}
+
+.food-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.food-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.food-recipe {
+  margin-top: 10px;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative; /* Make the container a reference for the absolute positioning of the spinner */
+}
+
+.search-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.food-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  opacity: 0; /* Initially set opacity to 0 */
+  transition: opacity 0.3s; /* Add a transition for opacity */
+}
+
+.food-card.show {
+  opacity: 1; /* Change opacity to 1 when the "show" class is applied */
+  transition: all 3s;
+  transition-delay: 0.3s;
+  margin-top: 2rem;
+}
+
+.row-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}

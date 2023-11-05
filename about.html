@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!------------form------------>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <!----------slide show bootstrap----------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!--------------icon for stars-------------->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+
+    <!---------Boxicons CSS ------------>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-----------my css-->
+    <link
+      rel="stylesheet"
+      href="./css/app.css"
+    />
+
+    <!-------------favicon----------->
+    <link
+      rel="shortcut icon"
+      href="./images/home-images/logo.png"
+      type="image/x-icon"
+    />
+    <title>Plate Pleasure | About</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"
+          ><img
+            src="./images/home-images/logo.png"
+            alt="Kusina La Pinas Logo"
+        /></span>
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo navLogo"
+              ><img
+                src="./images/home-images/logo.png"
+                alt="Kusina La Pinas Logo"
+            /></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a
+                href="index.html"
+                id="home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="menu.html"
+                id="menu"
+                >Menu</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="about.html"
+                id="About"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+          <div class="searchBox">
+            <div class="searchToggle"></div>
+          </div>
+        </div>
+
+        <div class="options">
+          <label for="language">Select Language:</label>
+          <select id="language">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="ko">Korean</option>
+            <option value="ja">Japanese</option>
+            <option value="es">Spanish</option>
+            <option value="ru">Russian</option>
+            <option value="zh">Chinese</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <!------------about----------->
+    <section id="about">
+      <div class="about">
+        <div class="development-title">
+          <h1>Development Team</h1>
+          <p>
+            We are a team of highly skilled developers who are passionate about
+            creating innovative solutions. Our expertise spans a wide range of
+            programming languages and technologies, allowing us to tackle
+            complex projects with confidence and precision. With years of
+            experience under our belts, we have honed our abilities to deliver
+            high-quality software, websites, and applications that not only meet
+            but exceed our clients' expectations.
+          </p>
+        </div>
+
+        <div class="developers">
+          <div class="first-dev">
+            <img
+              src="./images/about-images/first.jpg"
+              alt="Cristel"
+            />
+            <div class="developer-title">
+              <h3 id="cristel">
+                <a
+                  href="https://cristelportfoliokodegowd86.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Aban Cristel Villareal</a
+                >
+              </h3>
+              <p id="cristel-dev">FRONT END DEVELOPER</p>
+            </div>
+          </div>
+          <div class="second-dev">
+            <img
+              src="./images/about-images/third.png"
+              alt="geoff"
+            />
+            <div class="developer-title">
+              <h3 id="geoff">
+                <a
+                  href="https://myportofiliofullstackdeveloperwd86.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Geoffrey Beenie P. Orpia</a
+                >
+              </h3>
+              <p id="geoff-dev">FULL STACK DEVELOPER</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------contact form------------->
+
+    <div id="contactForm">
+      <div class="container">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Address</div>
+              <div class="text-one">Davao City, 8000, Philippines</div>
+            </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Phone</div>
+              <div class="text-one">+63 999 999 999</div>
+            </div>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">PlatePleasure@gmail.com</div>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="topic-text">Send us a message</div>
+            <p>
+              If you have any work from me or any types of quries related to my
+              tutorial, you can send me message from here. It's my pleasure to
+              help you.
+            </p>
+            <form action="#">
+              <div class="input-box">
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="input-box">
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="input-box message-box">
+                <textarea placeholder="Enter your message"></textarea>
+              </div>
+              <div class="button">
+                <input
+                  type="button"
+                  value="Send Now"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------------footer-------------->
+    <footer id="main-footer">
+      <div class="container">
+        <div class="sub-footer">
+          <div class="first-class">
+            <h1 id="footer-title">Kusina La Pinas</h1>
+            <p id="first-class-paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+              suscipit labore. Debitis, quidem! Obcaecati, nulla.
+            </p>
+          </div>
+          <div class="second-class">
+            <h1 id="footer-title">Get Help</h1>
+            <div class="class-link">
+              <div class="first-link">
+                <a href="#">FAQ</a>
+              </div>
+              <div class="second-link">
+                <a href="#">Shipping</a>
+              </div>
+              <div class="third-link">
+                <a href="#">Returns</a>
+              </div>
+              <div class="fourth-link">
+                <a href="#">Order Status</a>
+              </div>
+              <div class="fifth-link">
+                <a href="#">Payment Options</a>
+              </div>
+            </div>
+          </div>
+          <div class="third-class">
+            <h1 id="footer-title">Connect With Us</h1>
+            <div class="social">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <h1 id="footer-title">Tropang SyntaxSculptor</h1>
+            <p>Created by: Cristel, Jc, Geoff</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-------------end of footer-------------->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
