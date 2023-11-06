@@ -1,4 +1,33 @@
-/*--------------------change theme variables--------------*/
+const scrolling = () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    const [rightImage, leftImage] = [
+      document.querySelector(".right-image"),
+      document.querySelector(".left-image"),
+    ];
+    let lastScrollY = 0;
+
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+      const centerPosition = window.innerHeight / 2;
+      const isScrollingDown = scrollPosition > lastScrollY;
+      const isPastCenter = scrollPosition > centerPosition;
+
+      rightImage.classList.toggle(
+        "centered",
+        isScrollingDown ? isPastCenter : !isPastCenter
+      );
+      leftImage.classList.toggle(
+        "centered",
+        isScrollingDown ? !isPastCenter : isPastCenter
+      );
+
+      lastScrollY = scrollPosition;
+    });
+  });
+};
+
+scrolling();
+
 const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const modeToggle = document.querySelector(".dark-light");
@@ -6,27 +35,22 @@ const searchToggle = document.querySelector(".searchToggle");
 const sidebarOpen = document.querySelector(".sidebarOpen");
 const siderbarClose = document.querySelector(".siderbarClose");
 
-/*---------------local storage for change theme variable-------------*/
 let getMode = localStorage.getItem("mode");
 
-/*-------------navlink animation && slideShow variable--------*/
 const menu = document.querySelector("#menu");
 const slides = document.querySelectorAll(".slideshow .slide-image");
 let currentSlide = 0;
 
-/*-------------keep user selected mode even page refresh ----*/
 if (getMode && getMode === "dark-mode") {
   body.classList.add("dark");
 }
 
-// js code to toggle dark and light mode
 modeToggle.addEventListener("click", () => {
-  const language = document.querySelector("#language");
+  // const language = document.querySelector("#language");
   modeToggle.classList.toggle("active");
   body.classList.toggle("dark");
-  language.classList.add("language");
+  // language.classList.add("language");
 
-  // js code to keep user selected mode even page refresh or file reopen
   if (!body.classList.contains("dark")) {
     localStorage.setItem("mode", "light-mode");
   } else {
@@ -34,7 +58,6 @@ modeToggle.addEventListener("click", () => {
   }
 });
 
-// js code to toggle search box
 searchToggle.addEventListener("click", () => {
   searchToggle.classList.toggle("active");
 });
@@ -65,21 +88,11 @@ const slideShow = () => {
 
 setInterval(slideShow, 3000);
 
-/*-------------navlink menu animation bouncing--------*/
-const animationMenu = () => {
-  requestAnimationFrame(() => {
-    menu.classList.add("blink");
-  });
-};
-
-setInterval(animationMenu, 1000);
-
 /*----------------language translate---------------*/
 document.addEventListener("DOMContentLoaded", function () {
-  translateText(); // Translate on page load
+  translateText();
 });
 
-// Automatically translate when language is changed
 document.getElementById("language").addEventListener("change", function () {
   translateText();
 });
@@ -88,17 +101,181 @@ async function translateText() {
   const selectedLanguage = document.getElementById("language").value;
   const elementsToTranslate = [
     { id: "home", text: "Home" },
-    { id: "menu", text: "Menu" },
-    { id: "contact", text: "Contact" },
+    { id: "menu", text: "Food" },
     { id: "About", text: "About" },
+    // slide shhow
+    {
+      id: "first-paragraph",
+      text: " Food is more than just sustenance; it is an art form that transcends cultures and brings people together. The pleasure of eating food is in the subtle blend of flavors, the perfect balance of textures, and the harmonious combination of flavors that create a culinary masterpiece.",
+    },
+    { id: "first-title", text: "Plate Pleasure" },
+    {
+      id: "button-food",
+      text: "Search",
+    },
+
+    // left image
+    { id: "second-title", text: "Grilled Meat" },
+    {
+      id: "second-first-paragraph",
+      text: "We specialize in authentic Southern cuisine, using only the finest ingredients to create delicious and mouth watering dishes.",
+    },
+    {
+      id: "second-second-paragraph",
+      text: "Our menu features a variety of delicious dishes, including ribs, brisket, and smothered pork chops, along with sides like mac and cheese and mashed potatoes.",
+    },
+
+    // button of left && right image
+    { id: "second-button", text: "Read more" },
+
+    // right image
+    { id: "third-title", text: "Putchinta" },
+    {
+      id: "third-paragraph",
+      text: "Filipino kakanin is a traditional dish from the Philippines that consists of cooked rice mixed with various ingredients.",
+    },
+    {
+      id: "third-third-paragraph",
+      text: " Puto cuchinta or kutsinta is a type of steamed rice cake found throughout the Philippines. ",
+    },
+
+    // Menu && Popular dishes
+    { id: "menu-dishes", text: "Menu" },
+    { id: "popular-dishes", text: "Popular Dishes" },
+    {
+      id: "popular-dishes-paragraph",
+      text: "The Filipino cuisine is known for its rich and flavorful dishes that combine a mix of Asian, European, and African influences.",
+    },
+
+    // Burger
+    { id: "burger", text: "Burger" },
+    {
+      id: "burger-paragraph",
+      text: " Our burger is a perfect choice for any occasion, whether it's a quick lunch or a romantic dinner with your significant other.",
+    },
+
+    // Pizza
+    { id: "pizza", text: "Pizza" },
+    {
+      id: "pizza-paragraph",
+      text: "Our pizza is a perfect choice for any occasion, whether it's a quick lunch or a romantic dinner with your significant other.",
+    },
+
+    //Salad
+    { id: "salad", text: "Salad" },
+    {
+      id: "salad-paragraph",
+      text: "Our salad is made with organic ingredients and is served with a crisp dressing that will leave you wanting more.",
+    },
+
+    // Testimonials
+    { id: "fifth-title", text: "Our Customer Reviews" },
+    {
+      id: "fifth-paragraph",
+      text: "Our dining experience at this restaurant was truly exceptional. From the moment we walked in, we were greeted with warm hospitality and a welcoming atmosphere. ",
+    },
+    //First personal review
+    { id: "first-person", text: "Ryan Azur" },
+    {
+      id: "first-review",
+      text: "Each bite is a culinary delight, with flavors that leave you wanting more.",
+    },
+    { id: "date1", text: "November 7, 2023" },
+
+    //Second personal review
+    { id: "second-person", text: "Quez Fabela" },
+    {
+      id: "second-review",
+      text: "The ambiance is warm and cozy, creating a welcoming atmosphere for dining.",
+    },
+    { id: "date2", text: "November 7, 2023" },
+
+    // Third personal review
+    { id: "third-person", text: "Lancelot Guinevere" },
+    {
+      id: "third-review",
+      text: "The menu offers a variety of options, cater to all tastes and preferences.",
+    },
+    { id: "date3", text: "November 7, 2023" },
+
+    // Popular dishes
+    { id: "menu-title", text: "Menu" },
+
+    { id: "menu-subtitle", text: "Popular Dishes" },
+    {
+      id: "menu-paragraph",
+      text: "The Filipino cuisine is known for its rich and flavorful dishes that combine a mix of Asian, European, and African influences. The use of spices and herbs, along with fresh ingredients, results in a culinary experience that is both flavorful and satisfying.",
+    },
+    { id: "menu-burger", text: "Burger" },
+    {
+      id: "menu-burger-paragraph",
+      text: "Our burger is a perfect choice for any occasion, whether it's a quick lunch or a romantic dinner with your significant other.",
+    },
+    { id: "menu-pizza", text: "Pizza" },
+    {
+      id: "menu-pizza-paragraph",
+      text: "Our pizza is a perfect choice for any occasion, whether it's a quick lunch or a romantic dinner with your significant other.",
+    },
+    { id: "menu-salad", text: "Salad" },
+    {
+      id: "menu-salad-paragraph",
+      text: "Our salad is made with organic ingredients and is served with a crisp dressing that will leave you wanting more.",
+    },
+
+    // Testimonials
+    { id: "fifth-title", text: "Our Customer Reviews" },
+    {
+      id: "fifth-paragraph",
+      text: "Our dining experience at this restaurant was truly exceptional. From the moment we walked in, we were greeted with warm hospitality and a welcoming atmosphere. ",
+    },
+    //First personal review
+    { id: "first-person", text: "Ryan Azur" },
+    {
+      id: "first-review",
+      text: "Each bite is a culinary delight, with flavors that leave you wanting more.",
+    },
+    { id: "date1", text: "November 7, 2023" },
+
+    //Second personal review
+    { id: "second-person", text: "Quez Fabela" },
+    {
+      id: "second-review",
+      text: "The ambiance is warm and cozy, creating a welcoming atmosphere for domestics.",
+    },
+    { id: "date2", text: "November 7, 2023" },
+
+    // Third personal review
+
+    { id: "third-person", text: "Lancelot Guinevere" },
+    {
+      id: "third-review",
+      text: "The menu offers a variety of options, cater to all tastes and preferences.",
+    },
+    { id: "date3", text: "November 7, 2023" },
+
+    // Footer
+    { id: "footer-title", text: "Plate Pleasure" },
+    {
+      id: "first-class-paragraph",
+      text: "Food is a universal language that transcends borders and brings people together. It has the power to evoke memories, create moments of joy, and satisfy the soul.",
+    },
+    { id: "get-help", text: "Get Help" },
+    { id: "status1", text: "FAQs" },
+    { id: "status2", text: "Terms & Conditions" },
+    { id: "status3", text: "Licensing" },
+    { id: "status4", text: "Privacy Policy" },
+    { id: "status5", text: "Contact Us" },
+    { id: "footer-title", text: "Connect With Us" },
+    { id: "footer-title", text: "Tropang SyntaxSculptor" },
+    { id: "third-class-paragraph", text: "Created by: Cristel, Geoff" },
   ];
 
   for (const element of elementsToTranslate) {
     const elementNode = document.getElementById(element.id);
     if (elementNode) {
       if (selectedLanguage !== "en") {
-        const encodedText = encodeURIComponent(element.text);
-        // const apiUrl = `https://api.mymemory.translated.net/get?q=${encodedText}&langpair=en|${selectedLanguage}`;
+        const textToTranslate = encodeURIComponent(element.text);
+        // const apiUrl = `https://api.mymemory.translated.net/get?q=${textToTranslate}&langpair=en|${selectedLanguage}`;
         try {
           const response = await fetch(apiUrl);
           const data = await response.json();
@@ -148,25 +325,9 @@ class enemy {
     this.frame =
       gameFrame % 2 === 0 ? (this.frame > 4 ? 0 : this.frame + 1) : this.frame;
   }
-  // update() {
-  //   this.x += this.speed;
-  //   this.y += this.speed;
-  //   if (gameFrame % 2 === 0) {
-  //     this.frame > 4 ? (this.frame = 0) : this.frame++;
-  //   }
-  // }
 
   draw() {
-    const {
-      x,
-      y,
-      width,
-      height,
-      frame,
-      spriteWidth,
-      spriteHeight,
-      image: img,
-    } = this;
+    const { x, y, frame, spriteWidth, spriteHeight, image: img } = this;
     const sx = frame * spriteWidth;
     ctx.drawImage(img, sx, 0, spriteWidth, spriteHeight, x, y, 50, 50);
   }
@@ -189,49 +350,4 @@ function animate() {
 
 animate();
 
-// const sr = ScrollReveal({
-//   origin: "top",
-//   distance: "20px",
-//   duration: 1500,
-//   reset: true,
-// });
-
-// function translateText() {
-//   const selectedLanguage = document.getElementById("language").value;
-
-//   // Array of elements to translate
-//   const elementsToTranslate = [
-//     { id: "home", text: "Home" },
-//     { id: "menu", text: "Menu" },
-//     { id: "contact", text: "Contact" },
-//     { id: "About", text: "About" },
-//   ];
-
-//   elementsToTranslate.forEach((element) => {
-//     const elementNode = document.getElementById(element.id);
-//     if (elementNode) {
-//       // Check if the selected language is different from the current language
-//       if (selectedLanguage !== "en") {
-//         // Replace spaces with '%20' for URL encoding
-//         const encodedText = encodeURIComponent(element.text);
-
-//         // Construct the API URL with target language code
-//         const apiUrl = `https://api.mymemory.translated.net/get?q=${encodedText}&langpair=en|${selectedLanguage}`;
-
-//         fetch(apiUrl)
-//           .then((response) => response.json())
-//           .then((data) => {
-//             if (data.responseData && data.responseData.translatedText) {
-//               elementNode.textContent = data.responseData.translatedText;
-//             }
-//           })
-//           .catch((error) => {
-//             console.error("Error:", error);
-//           });
-//       } else {
-//         // If the selected language is English, no need to make a translation request
-//         elementNode.textContent = element.text;
-//       }
-//     }
-//   });
-// }
+// Define the display function
